@@ -172,7 +172,7 @@ h6 {
 .navbar .active,
 .navbar .active:focus,
 .navbar li:hover>a {
-  color: #3498db;
+  color: #5faee3;
 }
 
 .navbar .dropdown ul {
@@ -355,7 +355,7 @@ h6 {
 #hero {
   width: 100%;
   height: 60vh;
-  background: url("../img/hero-bg.jpg") center center;
+  background: url("../img/track.jpg") center center;
   background-size: cover;
   position: relative;
   margin-top: 70px;
@@ -403,13 +403,14 @@ h6 {
   padding: 12px 28px;
   border-radius: 4px;
   transition: ease-in-out 0.3s;
-  color: #fff;
-  background: #3498db;
+  color: black;
+  background: yellow;
   text-transform: uppercase;
 }
 
 #hero .btn-get-started:hover {
-  background: #4ea5e0;
+  background: wheat;
+  opacity: 0.5;
 }
 
 @media (max-width: 992px) {
@@ -451,7 +452,7 @@ section {
   font-size: 32px;
   font-weight: 600;
   margin-bottom: 20px;
-  padding-bottom: 20px;
+  /* padding-bottom: 20px; */
   position: relative;
 }
 
@@ -463,10 +464,10 @@ section {
   height: 1px;
   background: #ddd;
   bottom: 1px;
-  left: calc(50% - 60px);
+  /* left: calc(50% - 60px); */
 }
 
-.section-title h2::after {
+/* .section-title h2::after {
   content: "";
   position: absolute;
   display: block;
@@ -475,7 +476,7 @@ section {
   background: #3498db;
   bottom: 0;
   left: calc(50% - 20px);
-}
+} */
 
 .section-title p {
   margin-bottom: 0;
@@ -488,7 +489,11 @@ section {
   text-align: center;
   padding: 30px 20px;
   transition: all ease-in-out 0.3s;
-  background: #fff;
+  background: #ffffff;
+}
+
+.icon-box{
+  background-color: gray;
 }
 
 .what-we-do .icon-box .icon {
@@ -680,7 +685,8 @@ section {
 .services .icon-box {
   padding: 30px;
   border-radius: 6px;
-  background: #fff;
+  background: rgb(241, 241, 241);
+  opacity: 0.75;
   transition: ease-in-out 0.3s;
 }
 
