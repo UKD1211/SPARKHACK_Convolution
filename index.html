@@ -51,8 +51,8 @@
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
           <li><a class="nav-link scrollto" href="#services">Tracks</a></li>
-          <li><a class="nav-link scrollto " href="#portfolio">Sponsors</a></li>
-          
+          <li><a class="nav-link scrollto " href="#agenda">Agenda</a></li>
+          <li><a class="nav-link scrollto " href="#sponsors">Sponsors</a></li>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -85,6 +85,39 @@
     <!-- End What We Do Section -->
 
     <!-- ======= About Section ======= -->
+    <br><br>
+    <h1 id="demo" style="text-align: center; font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 80px;"></h1>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Mar 1, 2023 15:37:25").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+
+  // If the count down is finished, write some text
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
     <br><br><br>
     <section id="about" class="about">
       <div class="container">
@@ -291,8 +324,8 @@
       <div class="container">
 
         <div class="section-title">
-          <h2 style="font-family: sans-serif; font-weight: bold; font-size: 80px; color: black;">Team</h2>
-          <p>Sit sint consectetur velit quos quisquam cupiditate nemo qui</p>
+          <h2 style="font-family: sans-serif; font-weight: bold; font-size: 80px; color: black; text-align: left;">EVENT <br> JUDGES</h2>
+          <p style="text-align: left;">Sit sint consectetur velit quos quisquam cupiditate nemo qui</p>
         </div>
 
         <div class="row">
@@ -347,17 +380,43 @@
             </div>
           </div>
 
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="member">
+              <img src="assets/img/team/team-2.jpg" alt="">
+              <h4>Sarah Jhinson</h4>
+              <span>Product Manager</span>
+              <p>
+                Repellat fugiat adipisci nemo illum nesciunt voluptas repellendus. In architecto rerum rerum temporibus
+              </p>
+              <div class="social">
+                <a href=""><i class="bi bi-twitter"></i></a>
+                <a href=""><i class="bi bi-facebook"></i></a>
+                <a href=""><i class="bi bi-instagram"></i></a>
+                <a href=""><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
         </div>
 
       </div>
     </section><!-- End Team Section -->
 
     <!-- ======= Contact Section ======= -->
+
+    <section id="agenda">
+      <h1>Agenda</h1>
+    </section>
+
+    <section id="sponsors">
+      <h1>Sponsors</h1>
+    </section>
+
     <section id="contact" class="contact section-bg">
       <div class="container">
 
         <div class="section-title">
-          <h2 style="font-family: sans-serif; font-weight: bold; font-size: 80px; color: black;">Contact</h2>
+          <h2 style="font-family: sans-serif; font-weight: bold; font-size: 80px; color: black;">CONTACT</h2>
           <p>Magnam dolores commodi suscipit eius consequatur ex aliquid fuga</p>
         </div>
 
@@ -393,7 +452,7 @@
 
         <div class="row mt-5 justify-content-center">
           <div class="col-lg-10">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <form method="POST" id="contactForm" class="php-email-form">
               <div class="row">
                 <div class="col-md-6 form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
@@ -406,14 +465,15 @@
                 <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
               </div>
               <div class="form-group mt-3">
-                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+                <textarea class="form-control" name="message" id="message" rows="5" placeholder="Message" required></textarea>
               </div>
-              <div class="my-3">
+              <!-- <div class="my-3">
                 <div class="loading">Loading</div>
                 <div class="error-message"></div>
                 <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
+              </div> -->
+              <br><br>
+              <div class="text-center"><button type="submit" id="submit" style="color: black;">Send Message</button></div>
             </form>
           </div>
 
@@ -425,7 +485,7 @@
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
-  <footer id="footer">
+  <footer id="footer" style="background-color: yellow;">
 
     <div class="footer-top">
       <div class="container">
@@ -465,11 +525,11 @@
           </div>
 
           <div class="col-lg-4 col-md-6 footer-newsletter">
-            <h4>Join Our Newsletter</h4>
+            <!-- <h4>Join Our Newsletter</h4>
             <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
             <form action="" method="post">
               <input type="email" name="email"><input type="submit" value="Subscribe">
-            </form>
+            </form> -->
           </div>
 
         </div>
@@ -513,6 +573,15 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script src="/reg.js"></script>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
 
 </body>
 
