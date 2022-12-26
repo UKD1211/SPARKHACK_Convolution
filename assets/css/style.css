@@ -165,7 +165,7 @@ h6 {
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 912px) {
   .nTiihL {
     /* background-color: black;
     border-radius: 0px;
@@ -484,17 +484,38 @@ h6 {
   bottom: 0;
   z-index: -1;
 }
-
+/* 
 #hero h1 {
   margin: 0 0 10px 0;
   font-size: 48px;
   font-weight: 700;
   line-height: 56px;
   color: #fff;
+} */
+
+
+
+#hero h1 {
+  line-height: 0.7em;
+  text-align: center;
+  font-size: 110px;
 }
 
-#hero h1 span {
+/* #hero h1 span {
   border-bottom: 4px solid #3498db;
+} */
+
+span1 {
+  color: rgb(251, 255, 74);
+  font-weight: 700;
+}
+
+span69 {
+  font-family: poppins-semibold, poppins, sans-serif;
+}
+
+span669 {
+  text-shadow: #ffffff 3px 3px 0px, rgba(0, 0, 0, 0.2) 6px 6px 0px;
 }
 
 #hero h2 {
@@ -531,10 +552,10 @@ h6 {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   #hero h1 {
-    font-size: 30px;
-    line-height: 36px;
+    font-size: 47px;
+    line-height: 38px;
   }
 
   #hero h2 {
@@ -575,9 +596,9 @@ section {
   width: 120px;
   height: 1px;
   background: #ddd;
-  bottom: 1px;
+  bottom: 1px;}
   /* left: calc(50% - 60px); */
-} */
+
 
 /* .section-title h2::after {
   content: "";
