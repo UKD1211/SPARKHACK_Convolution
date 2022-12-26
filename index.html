@@ -317,21 +317,21 @@
   </section><!-- End Services Section -->
 
   <!-- ======= Portfolio Section ======= -->
-  <section id="sponsor">
+  <!-- <section id="sponsor">
     <h2 style="font-family: sans-serif; font-weight: bold; font-size: 80px; color: black; text-align: center;">Our Sponsors</h2>
     <div w3-include-html="sponsor.html"></div>
-  </section>
+  </section> -->
 
 
-  <section id="agenda">
+  <!-- <section id="agenda">
     <h2 style="font-family: sans-serif; font-weight: bold; font-size: 80px; color: black; text-align: center;">Event Timeline</h2>
-  </section>
+  </section> -->
 
 
   <!-- ======= Testimonials Section ======= -->
 
   <!-- ======= Team Section ======= -->
-  <section id="team" class="team">
+  <!-- <section id="team" class="team">
     <div class="container">
 
       <div class="section-title">
@@ -395,14 +395,14 @@
       </div>
 
     </div>
-  </section><!-- End Team Section -->
+  </section> -->
 
   <!-- ======= Contact Section ======= -->
   <section id="contact" class="contact section-bg">
     <div class="container">
 
       <div class="section-title">
-        <h2 style="font-family: sans-serif; font-weight: bold; font-size: 80px; color: black;">Contact</h2>
+        <h2 style="font-family: sans-serif; font-weight: bold; font-size: 80px; color: black;">CONTACT <br> US</h2>
         <p>Magnam dolores commodi suscipit eius consequatur ex aliquid fuga</p>
       </div>
 
@@ -563,39 +563,7 @@
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-    <script>
-      function includeHTML() {
-        var z, i, elmnt, file, xhttp;
-        /* Loop through a collection of all HTML elements: */
-        z = document.getElementsByTagName("*");
-        for (i = 0; i < z.length; i++) {
-          elmnt = z[i];
-          /*search for elements with a certain atrribute:*/
-          file = elmnt.getAttribute("w3-include-html");
-          if (file) {
-            /* Make an HTTP request using the attribute value as the file name: */
-            xhttp = new XMLHttpRequest();
-            xhttp.onreadystatechange = function() {
-              if (this.readyState == 4) {
-                if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-                if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-                /* Remove the attribute, and call this function once more: */
-                elmnt.removeAttribute("w3-include-html");
-                includeHTML();
-              }
-            }
-            xhttp.open("GET", file, true);
-            xhttp.send();
-            /* Exit the function: */
-            return;
-          }
-        }
-      }
-      </script>
-
-<script>
-  includeHTML();
-  </script>
+    
 
 
 </body>
