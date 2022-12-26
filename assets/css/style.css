@@ -568,7 +568,7 @@ section {
   position: relative;
 }
 
-.section-title h2::before {
+/* .section-title h2::before {
   content: "";
   position: absolute;
   display: block;
@@ -577,7 +577,7 @@ section {
   background: #ddd;
   bottom: 1px;
   /* left: calc(50% - 60px); */
-}
+} */
 
 /* .section-title h2::after {
   content: "";

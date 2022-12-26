@@ -24,6 +24,7 @@ const firebaseConfig = {
   var message = getElementVal("message");
 
   saveMessages(name, email, subject, message);
+  alert("Your Message was successfully sent to SparkHack Organizing Committee");
   // document.querySelector(".alert").style.display = "block";
 
   // setTimeout(() => {
