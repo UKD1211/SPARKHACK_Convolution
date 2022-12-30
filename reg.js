@@ -9,14 +9,14 @@ const firebaseConfig = {
 };
 
 
-  firebase.initializeApp(firebaseConfig);
+firebase.initializeApp(firebaseConfig);
 
-  var contactFormDB = firebase.database().ref('contactForm');
+var contactFormDB = firebase.database().ref('contactForm');
 
-  document.getElementById('contactForm').addEventListener('submit',submitForm);
+document.getElementById('contactForm').addEventListener('submit', submitForm);
 
-  function submitForm(e){
-    e.preventDefault();
+function submitForm(e) {
+  e.preventDefault();
 
   var name = getElementVal("name");
   var email = getElementVal("email");
@@ -34,19 +34,19 @@ const firebaseConfig = {
 
   document.getElementById("contactForm").reset();
 
-  }
+}
 
-  const saveMessages = (name, email, subject, message) => {
-    var newContactForm = contactFormDB.push();
-  
-    newContactForm.set({
-      name: name,
-      email: email,
-      subject: subject,
-      message: message,
-    });
-  };
+const saveMessages = (name, email, subject, message) => {
+  var newContactForm = contactFormDB.push();
 
-  const getElementVal = (id) => {
-    return document.getElementById(id).value;
-  };
+  newContactForm.set({
+    name: name,
+    email: email,
+    subject: subject,
+    message: message,
+  });
+};
+
+const getElementVal = (id) => {
+  return document.getElementById(id).value;
+};

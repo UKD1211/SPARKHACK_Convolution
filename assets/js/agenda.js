@@ -1,4 +1,4 @@
-var timelineSwiper = new Swiper ('.timeline .swiper-container', {
+var timelineSwiper = new Swiper('.timeline .swiper-container', {
   direction: 'vertical',
   loop: false,
   speed: 1600,
